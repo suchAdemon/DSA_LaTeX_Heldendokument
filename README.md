@@ -20,4 +20,3 @@ Wenn das Heldendokument ausgefüllt bzw. verändert werden soll, braucht man nur
 #### Disclaimer ####
 Ich stelle dieses Dokument nur für private Zwecke, laut den von Ulissess Spiele GmbH gewährten Rechten ("Darf zum Eigengebrauch photokopiert werden"), zur Verfügung.
 Alle Rechte an Bildern, Grafiken und dem Layout des Orignals sind der Ulisses Spiele GmbH vorbehalten!
-----muhahaha test---
