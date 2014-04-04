@@ -1,0 +1,49 @@
+%----------------------------
+%	The fancy stuff
+% dieses Makro gibt das Zeichen für eine Sonderfertigkeit zurück
+% Also angekreuzt wenn gewählt und leer wenn nicht
+\def \dasKreuzchen{$\boxtimes$}%<-- das Kreuzchen Symbol
+\def \dasNichtKreuzchen{$\square$}%<-- das NichtKreuzchen Symbol
+\newcommand{\SFKreuzchen}[1]{%
+\IfSubStr{\SonderfertigkeitenNahkampfA\SonderfertigkeitenNahkampfB\SonderfertigkeitenNahkampfC
+\SFausserKampfA\SFausserKampfB\SFausserKampfC\SFausserKampfD\SFausserKampfE\SFausserKampfF}{#1}
+{\dasKreuzchen}{\dasNichtKreuzchen}%
+}
+
+%----------------------------
+%	Kampfwerte
+\def \KampfwerteTrenner{\ $\bullet$\ }
+% Basis Kampftechniken
+\def \KampfwerteDolche{\makebox[2.5mm][c]{\TalentDolcheAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentDolchePA}}
+\def \KampfwerteHiebwaffen{\makebox[2.5mm][c]{\TalentHiebwaffenAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentHiebwaffenPA}}
+\def \KampfwerteRaufen{\makebox[2.5mm][c]{\TalentRaufenAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentRaufenPA}}
+\def \KampfwerteRingen{\makebox[2.5mm][c]{\TalentRingenAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentRingenPA}}
+\def \KampfwerteSaebel{\makebox[2.5mm][c]{\TalentSaebelAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentSaebelPA}}
+\def \KampfwerteWurfmesser{\makebox[2.5mm][c]{\TalentWurfmesserAT}\KampfwerteTrenner\makebox[2.5mm][c]{-}}
+
+% Extra Kampftechniken
+\def \KampfwerteKampfExtraA{\makebox[2.5mm][c]{\TalentKampfExtraAAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraAPA}}
+\def \KampfwerteKampfExtraB{\makebox[2.5mm][c]{\TalentKampfExtraBAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraBPA}}
+\def \KampfwerteKampfExtraC{\makebox[2.5mm][c]{\TalentKampfExtraCAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraCPA}}
+\def \KampfwerteKampfExtraD{\makebox[2.5mm][c]{\TalentKampfExtraDAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraDPA}}
+\def \KampfwerteKampfExtraE{\makebox[2.5mm][c]{\TalentKampfExtraEAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraEPA}}
+\def \KampfwerteKampfExtraF{\makebox[2.5mm][c]{\TalentKampfExtraFAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraFPA}}
+\def \KampfwerteKampfExtraG{\makebox[2.5mm][c]{\TalentKampfExtraGAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraGPA}}
+\def \KampfwerteKampfExtraH{\makebox[2.5mm][c]{\TalentKampfExtraHAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraHPA}}
+\def \KampfwerteKampfExtraI{\makebox[2.5mm][c]{\TalentKampfExtraIAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraIPA}}
+\def \KampfwerteKampfExtraJ{\makebox[2.5mm][c]{\TalentKampfExtraJAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraJPA}}
+
+%----------------------------
+%	Zauberbefüllung
+\makeatletter
+\newcounter{ZauberCounter}
+\ifnum\value{ZauberAnzahl}>32
+	\forloop[1]{ZauberCounter}{\value{ZauberAnzahl}}{\value{ZauberCounter} < 66}{%
+		\g@addto@macro\ZauberTabelleInhaltB{&&&&&&&&&&&&&\\\hline}%
+	}
+\else
+	\forloop{ZauberCounter}{\value{ZauberAnzahl}}{\value{ZauberCounter} < 33}{%
+		\g@addto@macro\ZauberTabelleInhaltA{&&&&&&&&&&&&&\\\hline}%
+	}
+\fi
+\makeatother

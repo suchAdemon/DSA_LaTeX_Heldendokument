@@ -41,12 +41,22 @@
 \def \CharakterNotizKompilierungsDatum{\today}
 
 %----------------------------
-%	Vor- und Nachteile
-\def \CharakterVorNachteileA{} % 1. Zeile
-\def \CharakterVorNachteileB{} % 2. Zeile
-\def \CharakterVorNachteileC{} % 3. Zeile
-\def \CharakterVorNachteileD{} % 4. Zeile
-\def \CharakterVorNachteileE{} % 5. Zeile
+% Vorteile
+\def \CharakterVorteileA{} % 1. Zeile
+\def \CharakterVorteileB{} % 2. Zeile
+\def \CharakterVorteileC{} % 3. Zeile
+\def \CharakterVorteileD{} % 4. Zeile
+\def \CharakterVorteileE{} % 5. Zeile
+
+%----------------------------
+% Nachteile
+\def \CharakterNachteileA{} % 1. Zeile
+\def \CharakterNachteileB{} % 2. Zeile
+\def \CharakterNachteileC{} % 3. Zeile
+\def \CharakterNachteileD{} % 4. Zeile
+\def \CharakterNachteileE{} % 5. Zeile
+
+
 
 %----------------------------
 %	Eigenschaften
@@ -623,6 +633,7 @@
 \def \WaffeNahkampfEBFd{} % Bruchfaktor: 4. Spalte
 \def \WaffeNahkampfEBFe{} % Bruchfaktor: 5. Spalte
 
+% Sonderfertigkeiten Nahkampf
 \def \SonderfertigkeitenNahkampfA{} % Nahkampf Sonderfertigkeiten (1. Zeile)
 \def \SonderfertigkeitenNahkampfB{} % Nahkampf Sonderfertigkeiten (2. Zeile)
 \def \SonderfertigkeitenNahkampfC{} % Nahkampf Sonderfertigkeiten (3. Zeile)
@@ -676,6 +687,7 @@
 \def \WaffeFernkampfCGeschosseH{}
 \def \WaffeFernkampfCGeschosseI{}
 
+% Sonderfertigkeiten Fernkampf
 \def \SonderfertigkeitenFernkampfA{} % Fernkampf Sonderfertigkeiten (1. Zeile)
 \def \SonderfertigkeitenFernkampfB{} % Fernkampf Sonderfertigkeiten (2. Zeile)
 
@@ -692,6 +704,7 @@
 \def \WaffenlosRaufenPA{}
 \def \WaffenlosRaufenTPA{}
 
+% Sonderfertigkeiten Waffenloser Kampf
 \def \SonderfertigkeitenWaffeloserKampfA{} % Sonderfertigkeiten/Manöver Waffenloser Kampf (1. Zeile)
 \def \SonderfertigkeitenWaffeloserKampfB{} % Sonderfertigkeiten/Manöver Waffenloser Kampf (2. Zeile)
 \def \SonderfertigkeitenWaffeloserKampfC{} % Sonderfertigkeiten/Manöver Waffenloser Kampf (3. Zeile)
@@ -736,14 +749,12 @@
 \def \RuestungERS{}
 \def \RuestungEBE{}
 
-\def \RuestungSummeRS{}
-\def \RuestungSummeBE{}
-\def \RuestungsgewoehnungWert{}
+\def \RuestungSummeRS{0}
+\def \RuestungSummeBE{0}
+\def \RuestungsgewoehnungWert{0}
 
 %----------------------------
 %	Ausweichen
-\def \AusweichenPA{0}
-\def \AusweichenBE{0}
 \def \AusweichenSumme{0}
 
 %----------------------------
@@ -889,9 +900,105 @@
 \def \VermoegenSilbertaler{0}
 \def \VermoegenHeller{0}
 \def \VermoegenKreuzer{0}
+\def \SonstigerBesitzA{}
+\def \SonstigerBesitzB{}
+\def \SonstigerBesitzC{}
+
+% Verbindungen
+\def \VerbindungenA{}
+\def \VerbindungenB{}
+\def \VerbindungenC{}
+\def \VerbindungenD{}
+\def \VerbindungenE{}
+\def \VerbindungenF{}
+\def \VerbindungenG{}
+\def \VerbindungenH{}
 
 % Notizen
 \def \NotizA{}
 \def \NotizB{}
 \def \NotizC{}
 \def \NotizD{$\parallel$ Generiert: \CharakterNotizGenerationsdatum\ $\parallel$ Letzte Änderung: \CharakterNotizLetzteAenderung\ $\parallel$ Kompiliert: \CharakterNotizKompilierungsDatum\ $\parallel$ Erlebte Abenteuer: \CharakterNotizAnzahlAbenteuer\ $\parallel$}
+
+% Tiere
+\def \TierAName{}
+\def \TierAArt{}
+\def \TierAINI{}
+\def \TierAAT{}
+\def \TierAPA{}
+\def \TierATP{}
+\def \TierALE{}
+\def \TierARS{}
+\def \TierAKO{}
+\def \TierAGS{}
+\def \TierAAU{}
+\def \TierAMR{}
+\def \TierALO{}
+\def \TierATK{}
+\def \TierAZK{}
+
+\def \TierBName{}
+\def \TierBArt{}
+\def \TierBINI{}
+\def \TierBAT{}
+\def \TierBPA{}
+\def \TierBTP{}
+\def \TierBLE{}
+\def \TierBRS{}
+\def \TierBKO{}
+\def \TierBGS{}
+\def \TierBAU{}
+\def \TierBMR{}
+\def \TierBLO{}
+\def \TierBTK{}
+\def \TierBZK{}
+
+\def \TierCName{}
+\def \TierCArt{}
+\def \TierCINI{}
+\def \TierCAT{}
+\def \TierCPA{}
+\def \TierCTP{}
+\def \TierCLE{}
+\def \TierCRS{}
+\def \TierCKO{}
+\def \TierCGS{}
+\def \TierCAU{}
+\def \TierCMR{}
+\def \TierCLO{}
+\def \TierCTK{}
+\def \TierCZK{}
+
+% Zauber Eigenschaften
+\def \CharakterZauberRepraesentation{}
+\def \CharakterZauberMerkmale{}
+\def \CharakterZauberBegabungen{}
+\def \CharakterZauberUnfaehigkeiten{}
+
+% Zauber:
+% definition:
+%	\neuerZauber{Zaubername}
+%		{Eig.1}{Eig.2}{Eig.3}
+%		{ZfW}
+%		{ZD}
+%		{Kosten}
+%		{Reichweite}
+%		{WD}
+%		{Anmerkung}
+%		{Komplexität}
+%		{Repräsentation}
+%		{Hauszauber?}
+%		{Lern}
+% ein Beispiel:
+%\neuerZauber{Balsam Salabunde}
+%	{KL}{IN}{CH}
+%	{10}
+%	{5}
+%	{1 Asp/LP (min 5)}
+%	{selbst/Berührung}
+%	{augenblicklich}
+%	{}
+%	{C}
+%	{Elf}
+%	{X}
+%	{}
